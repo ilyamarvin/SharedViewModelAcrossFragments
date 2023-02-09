@@ -16,6 +16,7 @@
 package com.example.cupcake
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -32,5 +33,15 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         val navController = navHostFragment.navController
 
         setupActionBarWithNavController(navController)
+    }
+
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        onBackPressed()
+//        return true
+//    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
